@@ -1,0 +1,33 @@
+{
+  "name": "azs-service",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "unit-test": "mocha unit-test",
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posol/azs-service.git"
+  },
+  "keywords": [
+    "azs"
+  ],
+  "author": "Poslovskii Aleksandr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/posol/azs-service/issues"
+  },
+  "homepage": "https://github.com/posol/azs-service#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6"
+  }
+}
