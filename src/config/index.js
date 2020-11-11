@@ -7,9 +7,7 @@ if (envFound.error) {
 }
 
 module.exports = {
-  azsListEndpoint: `${process.env.BASE_API_URL}${process.env.AZS_LIST_API_URL}
-  ${process.env.API_KEY}`,
-  pricesEndpoint: `${process.env.BASE_API_URL}${process.env.PRICES_API_URL}
-  ${process.env.API_KEY}`,
+  azsListEndpoint: `${process.env.BASE_API_URL}${process.env.AZS_LIST_API}${process.env.API_KEY}`,
+  pricesEndpoint: `${process.env.BASE_API_URL}${process.env.PRICES_API}${process.env.API_KEY}`,
   port: process.env.PORT,
 };
