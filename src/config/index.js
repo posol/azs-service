@@ -1,8 +1,15 @@
-const dotenv = require('dotenv');
+// dev config
+const envFound = require('dotenv').config({ path: './.env.default' });
 
-dotenv.config();
+if (envFound.error) {
+  // This error should crash whole process
+  throw new Error("Couldn't find .env file");
+}
+
 module.exports = {
-  endpoint: process.env.API_URL,
-  apiKey: process.env.API_KEY,
+  azsListEndpoint: `${process.env.BASE_API_URL}${process.env.AZS_LIST_API_URL}
+  ${process.env.API_KEY}`,
+  pricesEndpoint: `${process.env.BASE_API_URL}${process.env.PRICES_API_URL}
+  ${process.env.API_KEY}`,
   port: process.env.PORT,
 };
