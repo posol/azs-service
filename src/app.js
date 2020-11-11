@@ -7,7 +7,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(httpLogger);
+app.use(httpLogger);
 
 // routes
 app.get('/stations/prices', async (req, res, next) => {
